@@ -309,10 +309,32 @@
         transform: translateY(2px);
     }
 
+    .return-button {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px 24px;
+        width: 130px; /* Унификация размеров */
+        border-radius: 25px;
+        background: linear-gradient(145deg, #e52d27 0%, #b31217 100%); /* Красный градиент */
+        box-shadow: 0 6px #9f0f0f, 0 -6px #e52d27 inset; /* Добавление 3D эффекта */
+        color: white;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        outline: none; /* Убрать контур при фокусе для красоты */
+        font-family: 'Intro', sans-serif;
+        margin-top: 20px; /* Отступ сверху для разделения кнопок */
+    }
 
+    .return-button:hover {
+        background: linear-gradient(145deg, #b31217 0%, #e52d27 100%);
+        box-shadow: 0 8px #9f0f0f, 0 -6px #e52d27 inset; /* Углубление тени при наведении */
+        transform: translateY(-3px);
+    }
 
-
-
+    .return-button:active {
+        box-shadow: 0 3px #9f0f0f, 0 -3px #e52d27 inset; /* Сжатие при нажатии */
+        transform: translateY(2px);
+    }
 
     </style>
 </head>
@@ -329,6 +351,7 @@
     </div>
     <div class="button-container">
     <button class="start-button" onclick="openModal()">Начать</button>
+    <button class="return-button" onclick="location.href='https://your-url.com'">Вернуться</button>    
     <div class="business-name">
        <img src="tg.svg" alt="Telegram Icon" style="vertical-align: middle; margin-right: 10px; width: 60px; height: 60px;">
         N$GOCIO
