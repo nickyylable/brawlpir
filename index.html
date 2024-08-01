@@ -312,7 +312,7 @@
     .return-button {
         font-size: 16px;
         font-weight: bold;
-        padding: 12px 24px;
+        padding: 12px 12px; /* Уменьшение padding для выравнивания текста */
         width: 130px; /* Унификация размеров */
         border-radius: 25px;
         background: linear-gradient(145deg, #e52d27 0%, #b31217 100%); /* Красный градиент */
@@ -323,14 +323,15 @@
         outline: none; /* Убрать контур при фокусе для красоты */
         font-family: 'Intro', sans-serif;
         margin-top: 20px; /* Отступ сверху для разделения кнопок */
+        text-align: center; /* Выровнять текст по центру */
     }
-
+    
     .return-button:hover {
         background: linear-gradient(145deg, #b31217 0%, #e52d27 100%);
         box-shadow: 0 8px #9f0f0f, 0 -6px #e52d27 inset; /* Углубление тени при наведении */
         transform: translateY(-3px);
     }
-
+    
     .return-button:active {
         box-shadow: 0 3px #9f0f0f, 0 -3px #e52d27 inset; /* Сжатие при нажатии */
         transform: translateY(2px);
