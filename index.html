@@ -362,19 +362,20 @@
         <div class="modal-content">
              <button class="close-button" onclick="closeModal()">&#10005;</button>
             <p class="hash-id-text">GAME HASH ID </p>
-            <input type="text" id="hashIdInput" placeholder="Введите hash id" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введите hash id'">
+            <input type="text" id="hashIdInput" placeholder="Введите hash id" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введите hash id'" onkeydown="handleKeyPress(event)">
             <button class="modal-button" onclick="validateAndStartShuffle()">OK</button>
         </div>
     </div>
     <div id="message"></div> <!-- Область для сообщений -->
     <script>
         function handleKeyPress(event) {
-            if (event.key === 'Enter') {
+            if (event.key === 'Enter' || event.keyCode === 13) {
                 event.preventDefault();
                 validateAndStartShuffle();
-                document.activeElement.blur(); // Убирает клавиатуру
+                document.getElementById('hashIdInput').blur(); // Убирает клавиатуру
             }
         }
+
         function openModal() {
             document.getElementById('modal').style.display = 'flex';
         }
