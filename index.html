@@ -368,6 +368,13 @@
     </div>
     <div id="message"></div> <!-- Область для сообщений -->
     <script>
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                validateAndStartShuffle();
+                document.activeElement.blur(); // Убирает клавиатуру
+            }
+        }
         function openModal() {
             document.getElementById('modal').style.display = 'flex';
         }
